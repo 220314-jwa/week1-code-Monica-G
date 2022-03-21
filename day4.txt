@@ -1,12 +1,13 @@
 public class Main {
 	public static void main(String[] args) {
-		Javalin app = Javalin.create();
+		Javalin app = Javalin.create(); // calls Javalin 
 
-		app.start();
+		app.start(); // start server
 
-		app.get("foods", ctx -> {
-			Food myFood = new Food("carrots", "vegetable");
-			ctx.result("You got: " + myFood.name);
+		app.get("foods", ctx -> {  // end point handler implementation
+			Food myFood = new Food("carrots", "vegetable"); // changes myFood varibles name = carrots and type = vegetable 
+			ctx.result("You got: " + myFood.name); //methoud that returns the response to the user
 		});
 	}
 }
+// asssuming this is associated with day3 file the Javalin server is started and myFood passed carrots in name and vegetable in type. then i prints the responce = "You got: carrots" 
