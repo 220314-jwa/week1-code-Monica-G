@@ -1,24 +1,25 @@
 public class Food {
-	public String name;
+	public String name; //declaring string variables
 	public String type;
 
-	public Food(String name, String type) {
-		this.name = name;
+	public Food(String name, String type) { // overloaded constructor takes in information 
+		this.name = name; //assignes tha variable in name and replaces it
 		this.type = type;
 	}
 
-	public void cook() {
-		if (!name.contains("cooked")) {
-			name = "cooked " + name;
+	public void cook() { method of the class preforming a task
+		if (!name.contains("cooked")) {  // if name does not contai cooked 
+			name = "cooked " + name; // will add cooked before vale of name
 		}
 	}
 }
 
-public class Main {
+public class Main {  //instance method
 	public static void main(String[] args) {
-		Food myFood = new Food("potato", "vegetable");
-		myFood.cook();
+		Food myFood = new Food("potato", "vegetable"); //assignes potato to name and vegetable to type
+		myFood.cook();  calls the varible with the cook task running
 
-		System.out.println(myFood.name);
+		System.out.println(myFood.name); prints out the variables in name not type because it's not called
 	}
 }
+// this code will assigne string name with "potato" and type with "vegetable" then it will run the cook task and // add cooked to name because it doesn't already contain it, and it will print out= cooked potato
