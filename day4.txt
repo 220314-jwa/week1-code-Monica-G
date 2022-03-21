@@ -10,4 +10,4 @@ public class Main {
 		});
 	}
 }
-// asssuming this is associated with day3 file the Javalin server is started and myFood passed carrots in name and vegetable in type. then i prints the responce = "You got: carrots" 
+// asssuming this is associated with day3 file the Javalin server is started and myFood passed carrots in name and vegetable in type. then i prints the responce = "You got: carrots"  if the previous code was also runing you would get "You got: cooked carrots"
