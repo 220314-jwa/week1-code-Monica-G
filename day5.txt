@@ -1,25 +1,32 @@
-<html>
-	<head>
-		<title>Daily Code Review</title>
-	</head>
-	<body>
-		<h1>Cook your food!</h1>
-		<form action="http://localhost:8080/cook">
-			<label for="foodName">Food Name:</label>
-			<input id="foodName" name="foodName" type="text">
-			<br>
-			<button type="submit">Submit</button>
+<html> // the start of the html document that will lay out the users view
+	<head> // start of internal heading 
+		<title>Daily Code Review</title> //file name
+	</head> // end of heading 
+	<body> // start of body that will be displayed 
+		<h1>Cook your food!</h1> // heading in default size 1
+		<form action="http://localhost:8080/cook"> // links the javalin code
+			<label for="foodName">Food Name:</label> // lable for input content used to tell user what to do
+			<input id="foodName" name="foodName" type="text"> //peramiterfor user input and tags
+			<br> // line brake
+			<button type="submit">Submit</button> // creates a button user can press 
 		</form>
-	</body>
-</html>
+	</body> // end of body
+</html> //end of html
 
 public static void main(String[] args) {
-	Javalin app = Javalin.create();
-	app.start();
+	Javalin app = Javalin.create(); // conects javalin
+	app.start(); // start of server
 
-	app.get("cook", ctx -> {
-		String foodSent = ctx.formParam("foodName");
-		String cookedFood = "cooked " + foodSent;
-		ctx.result("Here's your food! <br>" + cookedFood);
+	app.get("cook", ctx -> { // endpoint handler
+		String foodSent = ctx.formParam("foodName"); string foodSent will = foodName input of html 
+		String cookedFood = "cooked " + foodSent; //cooked will be added to input value in foodSent
+		ctx.result("Here's your food! <br>" + cookedFood); //print of results
 	});
 }
+// the user will see:
+// Cook you food!  (in a larger font)
+// Food Name: [_____]  "box shape" ex: carrots
+// (Submit)   "button shape"
+// once the user inputs the food name in the box and hits submit the code will run and add cooked to input then 
+// the outcome will be "Here's your food!"
+//		       "cooked carrots"
