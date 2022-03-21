@@ -1,37 +1,37 @@
 public static void main(String[] args) {
-	String[] foodTypes = getFoodTypes();
-	String myType = foodTypes[2];
+	String[] foodTypes = getFoodTypes();  //return value will be assigned to the string foodType 
+	String myType = foodTypes[2]; // returns the variable "dinner" using foodTypes[2]
 
-	String[] foodsOfMyType = getFoodsByType(myType);
+	String[] foodsOfMyType = getFoodsByType(myType); //return value will be assigned to the string foodsOfMyType based on myType 
 	
-	for (String food : foodsOfMyType) {
-		System.out.println(food);
+	for (String food : foodsOfMyType) { // conditional operator that says foodsOfMyType have to be true of string food
+		System.out.println(food); //prints out burger
 	}
 }
 
-public static String[] getFoodTypes() {
-	String[] foodTypes = {"breakfast","lunch","dinner","dessert","snack"};
-	return foodTypes;
+public static String[] getFoodTypes() {   //declaring variable to getFoodTypes
+	String[] foodTypes = {"breakfast","lunch","dinner","dessert","snack"}; //this is ordered from 0,1,2,3,4 for each type of food saved in string
+	return foodTypes; //send the value stored in each respective space
 }
 
-public static String[] getFoodsByType(String type) {
-	String[] foods = new String[3];
+public static String[] getFoodsByType(String type) { //declaring variable to getFoodsByType calling the switch (type)
+	String[] foods = new String[3]; //instantiation a String in memory using "new" and decaring it a 3 staring the count at 1,2,3
 
-	switch(type) {
-	case "breakfast":
-		foods[0] = "pancakes";
+	switch(type) { 	//checks the value of the variable (type)
+	case "breakfast": // case catagory 
+		foods[0] = "pancakes"; // variables in the catagory starting at 1 for spot in string
 		foods[1] = "cereal";
 		foods[2] = "omelette";
-		break;
+		break;  // stops the system from checking the catagory for more spots
 	case "lunch":
 		foods[0] = "sandwich";
 		foods[1] = "salad";
 		foods[2] = "soup";
 		break;
-	case "dinner":
+	case "dinner": // the selected foodTypes 
 		foods[0] = "curry";
 		foods[1] = "stir fry";
-		foods[2] = "burger";
+		foods[2] = "burger"; // the selected string spot 
 		break;
 	case "dessert":
 		foods[0] = "cake";
@@ -43,10 +43,13 @@ public static String[] getFoodsByType(String type) {
 		foods[1] = "apple";
 		foods[2] = "samosa";
 		break;
-	default:
+	default: //only applies if no other code mached the specifications
 		// add your own
 		break;
 	}
 
-	return foods;
+	return foods; //sends the final value 
 }
+
+//this code will run the first String to get Dinner as the value of myType, 
+//then it will use that value to find the String foodsOfMyType and print out burger
