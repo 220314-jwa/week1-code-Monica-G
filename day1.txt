@@ -1,13 +1,18 @@
-int score = 80;
+int score = 80;  //intiger variable named score that is equal to 80
 
-String result;
+String result;  // the string is creating the global object: result that contains that print statement that is used in the if else statment.
 
-if (score == 80) {
-	result = "You passed!";
-} else if (score > 80) {
-	result = "You did great!";
-} else {
-	result = "You did not pass. Try again!";
-}
+if (score == 80) {   // an if statment saying that the variable: score has to be = to 80 to be true
+	result = "You passed!";  // this is the out put of "You passsed!" when the if stament is true 
+} else if (score > 80) {  // after runing the first if statment and it come out false, this second statement is run, and if score is less than 80 than the second if statment is true. 
+	result = "You did great!"; // this is the out put of "You did great!" when the else if statment is true
+} else {  // after both previouse statment are run and come out false this else statment is demed as true
+	result = "You did not pass. Try again!"; // this is the out put of "You did not pass. Try again!" when the else statement is true
 
-System.out.println(result);
+} //closing bracket of the if else statment
+
+System.out.println(result); //this is the print statment that is used in the if else statments by using the result string.
+
+// the if else statemnet runs and since the score is set to 80 
+// the first if statment is true and prints the comment "You passed!" 
+// by using the string result that passes the println comand.
